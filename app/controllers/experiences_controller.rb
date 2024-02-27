@@ -17,7 +17,7 @@ class ExperiencesController < ApplicationController
     if @experience.save
       redirect_to experiences_path, notice: 'Experience was successfully created.'
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -27,7 +27,7 @@ class ExperiencesController < ApplicationController
     if @experience.update(experience_params)
       redirect_to experiences_path, notice: 'Experience was successfully updated.'
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
