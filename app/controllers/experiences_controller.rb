@@ -24,7 +24,7 @@ class ExperiencesController < ApplicationController
   def edit; end
 
   def update
-    if @@experience.update(experience_params)
+    if @experience.update(experience_params)
       redirect_to experiences_path, notice: 'Experience was successfully updated.'
     else
       render :edit

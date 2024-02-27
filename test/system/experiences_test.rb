@@ -8,11 +8,11 @@ class ExperiencesTest < ApplicationSystemTestCase
     # When we visit the experiences#index page
     # we expect to see a title with the text "experiences"
     visit experiences_path
-    assert_selector "h1", text: "experiences"
+    assert_selector "h1", text: "Experiences"
 
     # When we click on the link with the text "New experience"
     # we expect to land on a page with the title "New experience"
-    click_on "New experience"
+    click_on "New Experience"
     assert_selector "h1", text: "New experience"
 
     # When we fill in the name input with "Capybara experience"
@@ -22,7 +22,7 @@ class ExperiencesTest < ApplicationSystemTestCase
 
     # We expect to be back on the page with the title "experiences"
     # and to see our "Capybara experience" added to the list
-    assert_selector "h1", text: "experiences"
+    assert_selector "h1", text: "Experiences"
     assert_text "Capybara experience"
   end
 
@@ -35,7 +35,7 @@ class ExperiencesTest < ApplicationSystemTestCase
 
   test "Updating an experience" do
     visit experiences_path
-    assert_selector "h1", text: "experiences"
+    assert_selector "h1", text: "Experiences"
 
     click_on "Edit", match: :first
     assert_selector "h1", text: "Edit experience"
@@ -43,7 +43,7 @@ class ExperiencesTest < ApplicationSystemTestCase
     fill_in "Name", with: "Updated experience"
     click_on "Update experience"
 
-    assert_selector "h1", text: "experiences"
+    assert_selector "h1", text: "Experiences"
     assert_text "Updated experience"
   end
 
