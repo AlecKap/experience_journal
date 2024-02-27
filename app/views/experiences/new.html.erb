@@ -1,0 +1,9 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to Experiences"), experiences_path %>
+
+  <div class="header">
+    <h1>New Experience</h1>
+  </div>
+
+  <% render "form", experience: @experience %>
+</main>
