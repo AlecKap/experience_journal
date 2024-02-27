@@ -1,0 +1,7 @@
+<div class="experience">
+  <%= link_to experience.name, experience_path(experience) %>
+  <div class="experience_actions">
+    <%= button_to "Delete", experience_path(experience), method: :delete, class: "btn btn--light" %>
+    <%= link_to "Edit", edit_experience_path(experience), class: "btn btn--light" %>
+  </div>
+</div>
