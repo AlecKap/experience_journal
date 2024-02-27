@@ -26,14 +26,14 @@ class ExperiencesTest < ApplicationSystemTestCase
     assert_text "Capybara experience"
   end
 
-  test "Showing a experience" do
+  test "Showing an experience" do
     visit experiences_path
     click_link @experience.name
 
     assert_selector "h1", text: @experience.name
   end
 
-  test "Updating a experience" do
+  test "Updating an experience" do
     visit experiences_path
     assert_selector "h1", text: "experiences"
 
@@ -47,7 +47,7 @@ class ExperiencesTest < ApplicationSystemTestCase
     assert_text "Updated experience"
   end
 
-  test "Destroying a experience" do
+  test "Destroying an experience" do
     visit experiences_path
     assert_text @experience.name
 
