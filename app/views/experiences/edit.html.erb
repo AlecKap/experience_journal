@@ -5,5 +5,7 @@
     <h1>Edit experience</h1>
   </div>
 
-  <%= render "form", experience: @experience %>
+  <%= turbo_frame_tag @experience do %>
+    <%= render "form", experience: @experience %>
+  <% end %>
 </main>
