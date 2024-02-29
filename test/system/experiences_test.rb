@@ -4,27 +4,6 @@ class ExperiencesTest < ApplicationSystemTestCase
   setup do
     @experience = experiences(:first) # Reference to the first fixture experience
   end
-  test "Creating a new experience" do
-    # When we visit the experiences#index page
-    # we expect to see a title with the text "experiences"
-    visit experiences_path
-    assert_selector "h1", text: "Experiences"
-
-    # When we click on the link with the text "New experience"
-    # we expect to land on a page with the title "New experience"
-    click_on "New Experience"
-    assert_selector "h1", text: "New experience"
-
-    # When we fill in the name input with "Capybara experience"
-    # and we click on "Create experience"
-    fill_in "Name", with: "Capybara experience"
-    click_on "Create experience"
-
-    # We expect to be back on the page with the title "experiences"
-    # and to see our "Capybara experience" added to the list
-    assert_selector "h1", text: "Experiences"
-    assert_text "Capybara experience"
-  end
 
   test "Showing an experience" do
     visit experiences_path
@@ -33,14 +12,28 @@ class ExperiencesTest < ApplicationSystemTestCase
     assert_selector "h1", text: @experience.name
   end
 
-  test "Updating an experience" do
+  test "Creating a new experience" do
     visit experiences_path
     assert_selector "h1", text: "Experiences"
 
-    click_on "Edit", match: :first
-    assert_selector "h1", text: "Edit experience"
+    click_on "New Experience"
+    fill_in "Name", with: "Capybara experience"
+    
+    assert_selector "h1", text: "Experience"
+    click_on "Create experience"
 
+    assert_selector "h1", text: "Experiences"
+    assert_text "Capybara experience"
+  end
+
+  test "Updating an experience" do
+    visit experiences_path
+    assert_selector "h1", text: "Experiences"
+    
+    click_on "Edit", match: :first
     fill_in "Name", with: "Updated experience"
+    
+    assert_selector "h1", text: "Experiences"
     click_on "Update experience"
 
     assert_selector "h1", text: "Experiences"
