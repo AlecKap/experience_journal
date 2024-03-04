@@ -3,6 +3,9 @@
     <%= link_to experience.name,
                 experience_path(experience),
                 data: { turbo_frame: "_top"} %>
+    <div class="experience_date">
+      <%= experience.created_at.strftime("%B %d, %Y") %>
+    </div>
     <div class="experience_actions">
       <%= button_to "Delete",
                     experience_path(experience),
