@@ -2,7 +2,7 @@ require "application_system_test_case"
 
 class ExperiencesTest < ApplicationSystemTestCase
   setup do
-    @experience = experiences(:first) # Reference to the first fixture experience
+    @experience = Experience.ordered.first
   end
 
   test "Showing an experience" do
