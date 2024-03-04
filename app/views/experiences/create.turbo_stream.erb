@@ -1,0 +1,20 @@
+<%= turbo_stream.prepend "experiences", @experience %>
+<%= turbo_stream.update Experience.new, "" %>
+
+
+<!-- These are all equivalent lines/blocks of code -->
+
+<!-- <%= turbo_stream.prepend "experiences", partial: "experiences/experience", locals: { experience: @experience } %> -->
+
+<!-- <%= turbo_stream.prepend "experiences" do %>
+        <%= render partial: "experiences/experience", locals: { experience: @experience } %>
+      <% end %>
+-->
+
+
+<!-- <%= turbo_stream.prepend "experiences" do %>
+      <%= render @experience %>
+    <% end %>
+-->
+
+<!-- <%= turbo_stream.prepend "experiences", @experience %> -->
