@@ -15,7 +15,10 @@ class ExperiencesController < ApplicationController
     @experience = Experience.new(experience_params)
 
     if @experience.save
-      redirect_to experiences_path, notice: 'Experience was successfully created.'
+      respond_to do |format|
+        format.html { redirect_to experiences_path, notice: 'Experience was successfully created.' }
+        format.turbo_stream
+      end
     else
       render :new, status: :unprocessable_entity
     end
