@@ -1,8 +1,11 @@
 first:
+  group: philterra_family
   name: First experience
 
 second:
+  group: philterra_family
   name: Second experience
 
 third:
+  group: philterra_family
   name: Third experience
