@@ -1,4 +1,6 @@
 class Experience < ApplicationRecord
+  belongs_to :group
+  
   validates :name, presence: true
 
   scope :ordered, -> { order(id: :desc) }
