@@ -1,7 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-Philterra_family:
+philterra_family:
   name: Philterra family
 
-Kapicak_family:
+kapicak_family:
   name: Kapicak family
