@@ -1,10 +1,10 @@
 <header class="navbar">
   <% if user_signed_in? %>
     <div class="navbar__brand">
-      Group name
+      <%= current_group.name %>
     </div>
     <div class="navbar__name">
-      Current user name
+      <%= "Welcome, #{current_user.name}" %>
     </div>
     <div class="navbar__title">
       Experinotes
