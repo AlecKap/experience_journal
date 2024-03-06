@@ -16,8 +16,8 @@ class ExperiencesController < ApplicationController
 
     if @experience.save
       respond_to do |format|
-        format.html { redirect_to experiences_path, notice: 'Experience was successfully created.' }
-        format.turbo_stream
+        format.html { redirect_to experiences_path, notice: "Experience was successfully created." }
+        format.turbo_stream { flash.now[:notice] = "Experience was successfully created." }
       end
     else
       render :new, status: :unprocessable_entity
@@ -28,7 +28,10 @@ class ExperiencesController < ApplicationController
 
   def update
     if @experience.update(experience_params)
-      redirect_to experiences_path, notice: 'Experience was successfully updated.'
+      respond_to do |format|
+        format.html { redirect_to experiences_path, notice: "Experience was successfully updated." }
+        format.turbo_stream { flash.now[:notice] = "Experience was successfully updated." }
+      end
     else
       render :edit, status: :unprocessable_entity
     end
@@ -38,8 +41,8 @@ class ExperiencesController < ApplicationController
     @experience.destroy
 
     respond_to do |format|
-      format.html { redirect_to experiences_path, notice: 'Experience was successfully destroyed.' }
-      format.turbo_stream
+      format.html { redirect_to experiences_path, notice: "Experience was successfully destroyed." }
+      format.turbo_stream { flash.now[:notice] = "Experience was successfully destroyed." }
     end
   end
 
