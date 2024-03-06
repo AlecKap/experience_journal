@@ -5,7 +5,7 @@ class Experience < ApplicationRecord
 
   scope :ordered, -> { order(id: :desc) }
 
-  broadcasts_to -> (experience) { "experiences" }, inserts_by: :prepend
+  broadcasts_to -> (experience) { [experience.group, "experiences"] }, inserts_by: :prepend
   # Line 6 is equivalent to:
     # after_create_commit -> { broadcast_prepend_later_to "experiences" }
     # the above is equivalent to:
