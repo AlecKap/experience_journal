@@ -12,6 +12,7 @@
   <%= turbo_frame_tag Experience.new %>
   
   <%= turbo_frame_tag "experiences" do %>
+    <%= render "experiences/empty_state" %>
     <%= render @experiences %>
   <% end %>
 </main>
