@@ -20,7 +20,7 @@
 
   // Modifiers will go there
   &--primary {
-    color: var(--color-white);
+    color: var(--color-light);
     background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-rotate));
 
     &:hover,
@@ -28,12 +28,12 @@
     &:focus-within,
     &:active {
       color: var(--color-white);
-      filter: saturate(1.4) brightness(115%);
+      filter: saturate(1.8) brightness(125%);
     }
   }
 
   &--secondary {
-    color: var(--color-white);
+    color: var(--color-light);
     background-image: linear-gradient(to right, var(--color-secondary), var(--color-secondary-rotate));
 
     &:hover,
@@ -41,7 +41,7 @@
     &:focus-within,
     &:active {
       color: var(--color-white);
-      filter: saturate(1.2) brightness(110%);
+      filter: saturate(1.8) brightness(150%);
     }
   }
 
@@ -54,21 +54,20 @@
     &:focus-within,
     &:active {
       color: var(--color-dark);
-      filter: brightness(92%);
+      filter: brightness(75%);
     }
   }
 
   &--dark {
-    color: var(--color-white);
-    border-color: var(--color-dark);
-    background-color: var(--color-dark);
+    color: var(--color-light);
+    background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-rotate));
 
     &:hover,
     &:focus,
     &:focus-within,
     &:active {
       color: var(--color-white);
-      filter: brightness(75%);
+      filter: saturate(1.2) brightness(150%);
     }
   }
 }
