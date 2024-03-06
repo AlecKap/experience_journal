@@ -17,9 +17,10 @@
   --font-size-xxxxl: 2.5rem; // 40px
 
   // Three different text colors
-  --color-text-header: hsl(280, 88%, 41%);
-  --color-text-body:   hsl(0, 5%, 25%);
-  --color-text-muted:  hsl(0, 1%, 44%);
+  --color-text-header:       hsl(280, 88%, 41%);
+  --color-text-body:         hsl(0, 5%, 25%);
+  --color-text-body-light:   hsl(280, 78%, 45%);
+  --color-text-muted:        hsl(0, 1%, 44%);
 
   // Classical and robust spacing system
   --space-xxxs: 0.25rem; // 4px
