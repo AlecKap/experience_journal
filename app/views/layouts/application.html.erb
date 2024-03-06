@@ -12,6 +12,11 @@
 
   <body>
     <%= render "layouts/navbar" unless current_page?(new_user_session_path) %>
+
+    <div id="flash" class="flash">
+      <%= render "layouts/flash" %>
+    </div>
+
     <%= yield %>
   </body>
 </html>
