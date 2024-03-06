@@ -6,14 +6,14 @@
     <div class="experience_date">
       <%= experience.created_at.strftime("%B %d, %Y") %>
     </div>
-    <div class="experience_actions">
+    <div class="experience__actions">
+      <%= link_to "Edit",
+                  edit_experience_path(experience),
+                  class: "btn btn--light" %>
       <%= button_to "Delete",
                     experience_path(experience),
                     method: :delete,
                     class: "btn btn--light" %>
-      <%= link_to "Edit",
-                  edit_experience_path(experience),
-                  class: "btn btn--light" %>
     </div>
   </div>
 <% end %>
