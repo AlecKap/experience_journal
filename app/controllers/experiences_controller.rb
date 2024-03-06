@@ -12,7 +12,7 @@ class ExperiencesController < ApplicationController
   end
 
   def create
-    @experience = Experience.new(experience_params)
+    @experience = current_group.experiences.build(experience_params)
 
     if @experience.save
       respond_to do |format|
@@ -46,7 +46,7 @@ class ExperiencesController < ApplicationController
   private
 
   def set_experience
-    @experience = Experience.find(params[:id])
+    @experience = current_group.experiences.find(params[:id])
   end
 
   def experience_params
