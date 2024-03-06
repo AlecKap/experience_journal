@@ -2,7 +2,7 @@ class ExperiencesController < ApplicationController
   before_action :set_experience, only: [:show, :edit, :update, :destroy]
 
   def index
-    @experiences = Experience.ordered
+    @experiences = current_group.experiences.ordered
   end
 
   def show; end
