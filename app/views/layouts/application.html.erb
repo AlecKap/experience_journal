@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <%= render "layouts/navbar" %>
+    <%= render "layouts/navbar" unless current_page?(root_path) || current_page?(user_session_path) %>
     <%= yield %>
   </body>
 </html>
