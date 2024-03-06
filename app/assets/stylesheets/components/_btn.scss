@@ -68,6 +68,7 @@
     &:focus-within,
     &:active {
       color: var(--color-white);
+      filter: brightness(75%);
     }
   }
 }
