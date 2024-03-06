@@ -1,0 +1,24 @@
+<header class="navbar">
+  <% if user_signed_in? %>
+    <div class="navbar__brand">
+      Group name
+    </div>
+    <div class="navbar__name">
+      Current user name
+    </div>
+    <div class="navbar__title">
+      Experinotes
+    </div>
+    <%= button_to "Sign out",
+                  destroy_user_session_path,
+                  method: :delete,
+                  class: "btn btn--dark" %>
+  <% else %>
+   <div class="navbar__title">
+      Experinotes
+    </div>
+    <%= link_to "Sign in",
+                new_user_session_path,
+                class: "btn btn--dark navbar__right" %>
+  <% end %>
+</header>
