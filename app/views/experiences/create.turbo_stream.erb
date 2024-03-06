@@ -1,6 +1,6 @@
 <%= turbo_stream.prepend "experiences", @experience %>
 <%= turbo_stream.update Experience.new, "" %>
-
+<%= render_turbo_stream_flash_messages %>
 
 <!-- These are all equivalent lines/blocks of code -->
 
