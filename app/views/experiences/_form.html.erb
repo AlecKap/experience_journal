@@ -6,6 +6,8 @@
   <% end %>
 
   <%= f.input :name, input_html: { autofocus: true } %>
-  <%= link_to "Cancel", experiences_path, class: "btn btn--light" %>
+  <%= link_to experiences_path, class: "btn btn--cancel" do %>
+    <i class="bi bi-x-square"></i>
+  <% end %>
   <%= f.submit class: "btn btn--secondary" %>
 <% end %>
