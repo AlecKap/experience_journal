@@ -1,0 +1,16 @@
+.bi {
+  &-x-square::before {
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+  }
+  
+  &-trash::before {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+  }
+
+  &-pencil-square::before {
+    color: var(--color-primary);
+    font-size: 30px;
+  }
+}
