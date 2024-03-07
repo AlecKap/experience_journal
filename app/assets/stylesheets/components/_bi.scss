@@ -1,14 +1,25 @@
 .bi {
+  // Cancel button
   &-x-square::before {
     color: rgb(0, 0, 0);
     font-size: 35px;
   }
+
+  // Cancel button
+  &-arrow-90deg-left::before {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    padding-top: 5px;
+    padding-left: 4px;
+  }
   
+  // Destroy button
   &-trash::before {
     color: rgb(0, 0, 0);
     font-size: 30px;
   }
 
+  // Edit button
   &-pencil-square::before {
     color: var(--color-primary);
     font-size: 30px;
