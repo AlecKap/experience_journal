@@ -16,6 +16,7 @@
 
   &__actions {
     display: flex;
+    align-items: center;
     flex: 0 0 auto;
     align-self: flex-start;
     gap: var(--space-xs);
