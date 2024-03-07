@@ -1,11 +1,15 @@
 first:
   group: philterra_family
-  name: First experience
+  name: Books
 
 second:
   group: philterra_family
-  name: Second experience
+  name: Travel
 
 third:
   group: philterra_family
-  name: Third experience
+  name: Dates
+
+fourth:
+  group: philterra_family
+  name: Movies
