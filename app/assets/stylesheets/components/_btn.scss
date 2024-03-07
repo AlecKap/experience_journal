@@ -75,20 +75,19 @@
   }
   
   &--cancel {
-    height: 35px;
-    width: 35px;
+    height: 40px;
+    width: 40px;
     padding-bottom: var(--space-xxs);
     color: var(--color-light);
-    background-color: var(--color-light);
+    background-color: var(--color-background-light);
     border: solid 0px transparent;
-    border-radius: .2rem;
+    border-radius: .75rem;
 
     &:hover,
     &:focus,
     &:focus-within,
     &:active {
-      color: var(--color-background-light);
-      filter: saturate(1.2) brightness(80%);
+      filter: saturate(1.2) brightness(70%);
       content: "cancel";
     }
     
