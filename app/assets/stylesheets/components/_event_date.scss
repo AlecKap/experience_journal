@@ -1,0 +1,30 @@
+.event-date {
+  margin-top: var(--space-m);
+  margin-bottom: var(--space-xxs);
+  background-color: var(--color-navbar-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-small);
+  margin-left: var(--space-xxl);
+  margin-right: var(--space-xxl);
+  padding: var(--space-xs);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-xs);
+  }
+
+  &__title {
+    font-size: var(--font-size-xl);
+
+    @include media(tabletAndUp) {
+      font-size: var(--font-size-xxl);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: var(--space-xs);
+  }
+}
