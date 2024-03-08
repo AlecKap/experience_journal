@@ -3,9 +3,6 @@
     <%= link_to experience.name,
                 experience_path(experience),
                 data: { turbo_frame: "_top"} %>
-    <div class="experience_date">
-      <%= experience.created_at.strftime("%B %d, %Y") %>
-    </div>
     <div class="experience__actions">
       <%= link_to edit_experience_path(experience), class: "btn btn--light" do %>
         <i class="bi bi-pencil-square"></i>
