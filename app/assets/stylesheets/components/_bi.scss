@@ -13,6 +13,13 @@
     padding-left: 6px;
   }
   
+  //  Form submit button
+  &-check-circle-fill::before {
+    color: rgb(105, 167, 12);
+    font-size: 32.5px;
+    border-radius: var(--border-radius);
+  }
+  
   // Destroy button
   &-trash::before {
     color: rgb(0, 0, 0);
