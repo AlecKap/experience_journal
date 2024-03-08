@@ -90,6 +90,23 @@
       filter: saturate(1.2) brightness(70%);
       content: "cancel";
     }
-    
+  }
+  
+  &--submit {
+    height: 40px;
+    width: 40px;
+    padding-top: 2.9px;
+    color: rgb(105, 167, 12);
+    background-color: var(--color-background-light);
+    border: solid 0px transparent;
+    border-radius: .75rem;
+
+    &:hover,
+    &:focus,
+    &:focus-within,
+    &:active {
+      filter: saturate(1.2) brightness(70%);
+      content: "cancel";
+    }
   }
 }
