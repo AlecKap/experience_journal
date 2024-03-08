@@ -1,9 +1,5 @@
 <%= simple_form_for experience, html: { class: "experience form" } do |f| %>
-  <% if experience.errors.any? %>
-    <div class="error-message">
-      <%= experience.errors.full_messages.to_sentence.capitalize %>
-    </div>
-  <% end %>
+  <%= form_error_notification(experience) %>
 
   <%= f.input :name, input_html: { autofocus: true } %>
   <%= link_to experiences_path, class: "btn btn--cancel" do %>
