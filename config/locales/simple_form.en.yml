@@ -6,10 +6,15 @@ en:
     labels:
       experience:
         name: Name
+      event_date:
+        date: Date
 
   helpers:
     submit:
       experience:
-        create: Create experience
-        update: Update experience
+        create: Create Experience
+        update: Update Experience
+      event_date:
+        create: Create Date
+        update: Update Date
 
