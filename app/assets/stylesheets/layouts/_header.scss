@@ -5,6 +5,8 @@
   justify-content: space-between;
   margin-top: var(--space-m);
   margin-bottom: var(--space-l);
+  margin-left: var(--space-xxxxxl);
+  margin-right: var(--space-xxxxxl);
   font-style: italic;
 
   @include media(tabletAndUp) {
