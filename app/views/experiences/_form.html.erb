@@ -3,7 +3,9 @@
 
   <%= f.input :name, input_html: { autofocus: true } %>
   <%= link_to experiences_path, class: "btn btn--cancel" do %>
-    <i class="bi bi-arrow-90deg-left"></i>
+    <i class="bi bi-x-circle"></i>
   <% end %>
-  <%= f.submit class: "btn btn--secondary" %>
+  <%= button_tag type: "submit", class: "btn btn--submit" do %>
+    <i class="bi bi-check-circle-fill"></i>
+  <% end %>
 <% end %>
