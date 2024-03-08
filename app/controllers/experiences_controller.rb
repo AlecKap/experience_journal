@@ -5,7 +5,9 @@ class ExperiencesController < ApplicationController
     @experiences = current_group.experiences.ordered
   end
 
-  def show; end
+  def show
+    @event_dates = @experience.event_dates.ordered
+  end
 
   def new
     @experience = Experience.new
