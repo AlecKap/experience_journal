@@ -4,6 +4,10 @@
     <h1>
       <%= @experience.name %>
     </h1>
+
+    <%= link_to "New Date",
+                new_experience_event_date_path(@experience),
+                class: "btn btn--primary" %>
   </div>
   
   <%= render @event_dates, experience: @experience %>
