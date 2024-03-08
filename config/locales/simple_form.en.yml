@@ -10,11 +10,3 @@ en:
         date: Date
 
   helpers:
-    submit:
-      experience:
-        create: Create Experience
-        update: Update Experience
-      event_date:
-        create: Create Date
-        update: Update Date
-
