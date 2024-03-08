@@ -1,0 +1,13 @@
+<%= simple_form_for [experience, event_date], html: { class: "form event-date" } do |f| %>
+  <% if event_date.errors.any? %>
+    <div class="error-message">
+      <%= event_date.errors.full_messages.to_sentence.capitalize %>
+    </div>
+  <% end %>
+
+  <%= f.input :date, html5: true, input_html: { autofocus: true } %>
+  <%= link_to experience_path(experience), class: "btn btn--cancel" do %>
+    <i class="bi bi-arrow-90deg-left"></i>
+<% end %>
+  <%= f.submit class: "btn btn--secondary" %>
+<% end %>
