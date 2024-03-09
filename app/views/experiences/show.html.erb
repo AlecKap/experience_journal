@@ -6,7 +6,7 @@
       <%= @experience.name %>
     </h1>
 
-    <%= link_to "New Date",
+    <%= link_to "New Entry Date",
                 new_experience_event_date_path(@experience),
                 data: { turbo_frame: dom_id(EventDate.new) },
                 class: "btn btn--primary" %>
