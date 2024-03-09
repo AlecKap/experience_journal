@@ -1,5 +1,6 @@
 <main class="container">
   <%= link_to sanitize("&larr; Back to experiences"), experiences_path %>
+  
   <div class="header">
     <h1>
       <%= @experience.name %>
@@ -7,8 +8,12 @@
 
     <%= link_to "New Date",
                 new_experience_event_date_path(@experience),
+                data: { turbo_frame: dom_id(EventDate.new) },
                 class: "btn btn--primary" %>
   </div>
   
-  <%= render @event_dates, experience: @experience %>
+  <%= turbo_frame_tag EventDate.new %>
+  <%= turbo_frame_tag "event_dates" do %>
+    <%= render @event_dates, experience: @experience %>
+  <% end %>
 </main>
