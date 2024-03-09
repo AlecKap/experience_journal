@@ -10,7 +10,10 @@ class EventDatesController < ApplicationController
     @event_date = @experience.event_dates.build(event_date_params)
 
     if @event_date.save
-      redirect_to experience_path(@experience), notice: "Date was successfully created."
+      respond_to do |format|
+        format.html { redirect_to experience_path(@experience), notice: "Date was successfully created." }
+        format.turbo_stream { flash.now[:notice] = "Date was successfully created." }
+      end
     else
       render :new, status: :unprocessable_entity
     end
