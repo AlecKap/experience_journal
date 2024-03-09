@@ -1,7 +1,13 @@
 <main class="home">
-  <h1>Experinotes</h1>
-  <p>Welcome, you can use this space to record your experiences!</p>
-
+  <h1 class="home__title">Experinotes</h1>
+  <br>
+  <% if user_signed_in? %>
+    <h2>Welcome back,&nbsp; <%= current_user.name %>!</h2>
+  <% else %>
+    <h2>Hello there, this is a space you can use to record any of your experiences!</h2>
+  <% end %>
+  <br>
+  <br>
   <% if user_signed_in? %>
     <%= link_to "View experiences", experiences_path, class: "btn btn--dark" %>
   <% else %>
