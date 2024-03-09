@@ -23,7 +23,10 @@ class EventDatesController < ApplicationController
 
   def update
     if @event_date.update(event_date_params)
-      redirect_to experience_path(@experience), notice: "Date was successfully updated."
+      respond_to do |format|
+        format.html { redirect_to experience_path(@experience), notice: "Date was successfully updated." }
+        format.turbo_stream { flash.now[:notice] = "Date was successfully updated." }
+      end
     else
       render :edit, status: :unprocessable_entity
     end
