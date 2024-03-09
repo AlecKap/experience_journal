@@ -1,5 +1,6 @@
 class EventDatesController < ApplicationController
   before_action :set_experience
+  before_action :set_event_date, only: [:edit, :update, :destroy]
 
   def new
     @event_date = @experience.event_dates.build
@@ -15,10 +16,30 @@ class EventDatesController < ApplicationController
     end
   end
 
+  def edit; end
+
+  def update
+    if @event_date.update(event_date_params)
+      redirect_to experience_path(@experience), notice: "Date was successfully updated."
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @event_date.destroy
+
+    redirect_to experience_path(@experience), notice: "Date was successfully destroyed."
+  end
+
   private
 
   def event_date_params
     params.require(:event_date).permit(:date)
+  end
+
+  def set_event_date
+    @event_date = @experience.event_dates.find(params[:id])
   end
 
   def set_experience
