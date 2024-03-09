@@ -1,11 +1,12 @@
 .event-date {
+  align-items: center;
   margin-top: var(--space-m);
   margin-bottom: var(--space-xxs);
   background-color: var(--color-navbar-background);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-small);
-  margin-left: var(--space-xxl);
-  margin-right: var(--space-xxl);
+  margin-left: var(--space-xxxxxxl);
+  margin-right: var(--space-xxxxxxl);
   padding: var(--space-xs);
 
   &__header {

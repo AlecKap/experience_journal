@@ -4,10 +4,10 @@
       <%= current_group.name %>
     </div>
     <div class="navbar__name">
-      <%= "Welcome, #{current_user.name}" %>
+      Hello, &nbsp;<%= current_user.name %>
     </div>
     <div class="navbar__title">
-      Experinotes
+      <h4>Experinotes</h4>
     </div>
     <%= button_to "Sign out",
                   destroy_user_session_path,
@@ -15,7 +15,7 @@
                   class: "btn btn--dark" %>
   <% else %>
     <div class="navbar__title">
-      Experinotes
+      <h4>Experinotes</h4>
     </div>
     <%= link_to "Sign in",
                 new_user_session_path,

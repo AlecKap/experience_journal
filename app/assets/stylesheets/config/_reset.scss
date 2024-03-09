@@ -50,19 +50,25 @@ h6 {
 }
 
 h1 {
-  font-size: var(--font-size-xxxl);
+  font-size: var(--font-size-xxxxxl);
+  text-shadow: var(--text-shaddow-large);
 }
 
 h2 {
   font-size: var(--font-size-xxl);
+  text-shadow: var(--text-shaddow-small);
+  align-items: center;
 }
 
 h3 {
   font-size: var(--font-size-xl);
+  text-shadow: var(--text-shaddow-small);
+  align-items: center;
 }
 
 h4 {
-  font-size: var(--font-size-l);
+  font-size: var(--font-size-xxl);
+  text-shadow: var(--text-shaddow-small);
 }
 
 a {
@@ -74,6 +80,6 @@ a {
   &:hover,
   &:focus,
   &:active {
-    color: var(--color-primary-rotate);
+    color: var(--color-primary-link-rotate);
   }
 }

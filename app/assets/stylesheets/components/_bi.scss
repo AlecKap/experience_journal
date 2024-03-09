@@ -8,15 +8,16 @@
   // Cancel button
   &-x-circle::before {
     color: rgb(0, 0, 0);
-    font-size: 32.5px;
-    padding-top: 4px;
-    padding-left: 4px;
+    font-size: 35px;
+    padding-top: 5px;
+    padding-left: 5px;
   }
   
   //  Form submit button
   &-check-circle-fill::before {
     color: rgb(105, 167, 12);
-    font-size: 32.5px;
+    padding-top: 2.5px;
+    font-size: 35px;
     border-radius: var(--border-radius);
   }
   
