@@ -1,0 +1,7 @@
+today:
+  experience: first
+  date: <%= Date.current %>
+
+next_week:
+  experience: first
+  date: <%= Date.current + 7.days %>
