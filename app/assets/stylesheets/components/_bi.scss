@@ -15,7 +15,7 @@
   
   //  Form submit button
   &-check-circle-fill::before {
-    color: rgb(105, 167, 12);
+    color: var(--color-primary);
     padding-top: 2.5px;
     font-size: 35px;
     border-radius: var(--border-radius);
