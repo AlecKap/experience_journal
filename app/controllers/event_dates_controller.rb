@@ -35,7 +35,10 @@ class EventDatesController < ApplicationController
   def destroy
     @event_date.destroy
 
-    redirect_to experience_path(@experience), notice: "Date was successfully destroyed."
+    respond_to do |format|
+      format.html { redirect_to experience_path(@experience), notice: "Date was successfully destroyed." }
+      format.turbo_stream { flash.now[:notice] = "Date was successfully destroyed." }
+    end
   end
 
   private
