@@ -4,4 +4,8 @@ class EventDate < ApplicationRecord
   validates :date, presence: true, uniqueness: { scope: :experience_id }
 
   scope :ordered, -> { order(date: :asc) }
+
+  def previous_date
+    experience.event_dates.ordered.where("date < ?", date).last
+  end
 end
