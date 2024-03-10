@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :experiences do
-    resources :entry_dates, except: [:index]
+    resources :entry_dates, except: [:index] do
+      resources :events, except: [:index]
+    end
   end
 end
