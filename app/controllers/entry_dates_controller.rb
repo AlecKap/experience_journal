@@ -2,7 +2,9 @@ class EntryDatesController < ApplicationController
   before_action :set_experience
   before_action :set_entry_date, only: [:edit, :update, :destroy, :show]
 
-  def show; end
+  def show
+    @events = @entry_date.events.ordered
+  end
 
   def new
     @entry_date = @experience.entry_dates.build
@@ -49,11 +51,12 @@ class EntryDatesController < ApplicationController
     params.require(:entry_date).permit(:date)
   end
 
+  def set_experience
+    @experience = current_group.experiences.find(params[:experience_id])
+  end
+  
   def set_entry_date
     @entry_date = @experience.entry_dates.find(params[:id])
   end
 
-  def set_experience
-    @experience = current_group.experiences.find(params[:experience_id])
-  end
 end
