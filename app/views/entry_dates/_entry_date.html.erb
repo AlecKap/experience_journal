@@ -1,13 +1,13 @@
 <%= turbo_frame_tag entry_date do %>
-  <div class="event-date">
-    <div class="event-date__header">
-      <h2 class="event-date__title">
+  <div class="entry-date">
+    <div class="entry-date__header">
+      <h2 class="entry-date__title">
         <%= link_to l(entry_date.date, format: :long),
                     experience_entry_date_path(experience, entry_date),
                     data: { turbo_frame: "_top"} %>
       </h2>
 
-      <div class="event-date__actions">
+      <div class="entry-date__actions">
         <%= link_to [:edit, experience, entry_date], class: "btn btn--light" do %>
           <i class="bi bi-pencil-square"></i>
         <% end %>
