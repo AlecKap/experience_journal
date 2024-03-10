@@ -6,7 +6,7 @@ en:
     labels:
       experience:
         name: Name
-      event_date:
+      entry_date:
         date: Date
 
   helpers:

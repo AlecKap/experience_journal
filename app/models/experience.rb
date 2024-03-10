@@ -1,6 +1,6 @@
 class Experience < ApplicationRecord
   belongs_to :group
-  has_many :event_dates, dependent: :destroy
+  has_many :entry_dates, dependent: :destroy
   
   validates :name, presence: true
 

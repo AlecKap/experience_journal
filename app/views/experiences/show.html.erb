@@ -7,15 +7,15 @@
     </h1>
 
     <%= link_to "New Entry Date",
-                new_experience_event_date_path(@experience),
-                data: { turbo_frame: dom_id(EventDate.new) },
+                new_experience_entry_date_path(@experience),
+                data: { turbo_frame: dom_id(EntryDate.new) },
                 class: "btn btn--primary" %>
   </div>
   
-  <%= turbo_frame_tag EventDate.new %>
+  <%= turbo_frame_tag EntryDate.new %>
 
-  <%= turbo_frame_tag "event_dates" do %>
-    <%= render "event_dates/empty_state" %>
-    <%= render @event_dates, experience: @experience %>
+  <%= turbo_frame_tag "entry_dates" do %>
+    <%= render "entry_dates/empty_state" %>
+    <%= render @entry_dates, experience: @experience %>
   <% end %>
 </main>

@@ -1,17 +1,17 @@
-<%= turbo_frame_tag event_date do %>
+<%= turbo_frame_tag entry_date do %>
   <div class="event-date">
     <div class="event-date__header">
       <h2 class="event-date__title">
-        <%= link_to l(event_date.date, format: :long),
-                    experience_event_date_path(experience, event_date),
+        <%= link_to l(entry_date.date, format: :long),
+                    experience_entry_date_path(experience, entry_date),
                     data: { turbo_frame: "_top"} %>
       </h2>
 
       <div class="event-date__actions">
-        <%= link_to [:edit, experience, event_date], class: "btn btn--light" do %>
+        <%= link_to [:edit, experience, entry_date], class: "btn btn--light" do %>
           <i class="bi bi-pencil-square"></i>
         <% end %>
-        <%= button_to [experience, event_date],
+        <%= button_to [experience, entry_date],
                       method: :delete,
                       form: { data: { turbo_confirm: "Are you sure?" } },
                       class: "btn btn--light" do %>

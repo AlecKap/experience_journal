@@ -1,0 +1,13 @@
+<%= turbo_stream.update EntryDate.new, "" %>
+
+<% if previous_date = @entry_date.previous_date %>
+  <%= turbo_stream.after previous_date do %>
+    <%= render @entry_date, experience: @experience %>
+  <% end %>
+<% else %>
+  <%= turbo_stream.prepend "entry_dates" do %>
+    <%= render @entry_date, experience: @experience %>
+  <% end %>
+<% end %>
+
+<%= render_turbo_stream_flash_messages %>

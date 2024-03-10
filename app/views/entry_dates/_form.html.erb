@@ -1,5 +1,5 @@
-<%= simple_form_for [experience, event_date], html: { class: "form event-date" } do |f| %>
-  <%= form_error_notification(event_date) %>
+<%= simple_form_for [experience, entry_date], html: { class: "form event-date" } do |f| %>
+  <%= form_error_notification(entry_date) %>
 
   <%= f.input :date, html5: true, input_html: { autofocus: true } %>
   <%= link_to experience_path(experience), class: "btn btn--cancel" do %>
