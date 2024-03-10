@@ -1,6 +1,8 @@
 class EventDatesController < ApplicationController
   before_action :set_experience
-  before_action :set_event_date, only: [:edit, :update, :destroy]
+  before_action :set_event_date, only: [:edit, :update, :destroy, :show]
+
+  def show; end
 
   def new
     @event_date = @experience.event_dates.build
