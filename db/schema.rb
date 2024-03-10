@@ -10,18 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_03_07_224550) do
+ActiveRecord::Schema[7.0].define(version: 2024_03_10_193801) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "event_dates", force: :cascade do |t|
+  create_table "entry_dates", force: :cascade do |t|
     t.bigint "experience_id", null: false
     t.date "date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["date", "experience_id"], name: "index_event_dates_on_date_and_experience_id", unique: true
-    t.index ["date"], name: "index_event_dates_on_date"
-    t.index ["experience_id"], name: "index_event_dates_on_experience_id"
+    t.index ["date", "experience_id"], name: "index_entry_dates_on_date_and_experience_id", unique: true
+    t.index ["date"], name: "index_entry_dates_on_date"
+    t.index ["experience_id"], name: "index_entry_dates_on_experience_id"
   end
 
   create_table "experiences", force: :cascade do |t|
@@ -52,7 +52,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_07_224550) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "event_dates", "experiences"
+  add_foreign_key "entry_dates", "experiences"
   add_foreign_key "experiences", "groups"
   add_foreign_key "users", "groups"
 end
