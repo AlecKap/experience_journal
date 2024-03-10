@@ -1,0 +1,21 @@
+<div class="event">
+    <div class="event__header">
+      <h2 class="event__title">
+        <%= link_to event.title,
+                    experience_entry_date_event_path(@experience, entry_date, event),
+                    data: { turbo_frame: "_top"} %>
+      </h2>
+
+      <div class="event__actions">
+        <%= link_to [:edit, @experience, entry_date, event], class: "btn btn--light" do %>
+          <i class="bi bi-pencil-square"></i>
+        <% end %>
+        <%= button_to [@experience, entry_date, event],
+                      method: :delete,
+                      form: { data: { turbo_confirm: "Are you sure?" } },
+                      class: "btn btn--light" do %>
+          <i class="bi bi-trash"></i>
+        <% end %>
+      </div>
+    </div>
+  </div>
