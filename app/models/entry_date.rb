@@ -1,5 +1,6 @@
 class EntryDate < ApplicationRecord
   belongs_to :experience
+  has_many :events, dependent: :destroy
 
   validates :date, presence: true, uniqueness: { scope: :experience_id }
 
