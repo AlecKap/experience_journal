@@ -2,7 +2,9 @@
   <div class="event-date">
     <div class="event-date__header">
       <h2 class="event-date__title">
-        <%= l(event_date.date, format: :long) %>
+        <%= link_to l(event_date.date, format: :long),
+                    experience_event_date_path(experience, event_date),
+                    data: { turbo_frame: "_top"} %>
       </h2>
 
       <div class="event-date__actions">
