@@ -3,7 +3,13 @@
   
   <div class="header">
     <h1>
-      <%= l(@entry_date.date, format: :long) %>
+      <%= @experience.name %>
     </h1>
   </div>
+  <div class="entry-date-date">
+    <h2>
+      <%= l(@entry_date.date, format: :long) %>
+    </h2>
+  </div>
+  <%= render @events, entry_date: @entry_date %>
 </main>
