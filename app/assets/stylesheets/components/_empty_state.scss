@@ -10,6 +10,7 @@
   border-style: dashed;
   border-radius: var(--border-radius);
   text-align: center;
+  text-shadow: var(--text-shaddow-x-small);
 
   &__text {
     font-size: var(--font-size-xxl);
