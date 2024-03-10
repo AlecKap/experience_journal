@@ -1,0 +1,10 @@
+<div class="empty-state empty-state--only-child">
+  <p class="empty-state__text">
+    You haven't logged any entries yet. Click the button below to record your first one!
+  </p>
+
+  <%= link_to "Click Here To Add Your First Entry",
+              new_experience_event_date_path(@experience),
+              data: { turbo_frame: dom_id(EventDate.new) },
+              class: "btn btn--primary" %>
+</div>
