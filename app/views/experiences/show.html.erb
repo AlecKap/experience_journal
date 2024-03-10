@@ -13,7 +13,9 @@
   </div>
   
   <%= turbo_frame_tag EventDate.new %>
+
   <%= turbo_frame_tag "event_dates" do %>
+    <%= render "event_dates/empty_state" %>
     <%= render @event_dates, experience: @experience %>
   <% end %>
 </main>
