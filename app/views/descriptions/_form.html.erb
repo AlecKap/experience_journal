@@ -1,0 +1,8 @@
+<%= form_with model: [@experience, @entry_date, @event, @description] do |form| %>
+  <div class="field">
+    <%= form.rich_text_area :content %>
+    <div class="field__actions">
+      <%= form.submit class: "btn btn--submit-for-desc" %>
+    </div>
+  </div>
+<% end %>
