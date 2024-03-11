@@ -1,0 +1,10 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back"), experience_entry_date_event_path(@experience, @entry_date, @event) %>
+
+  <div class="header">
+    <h1>Edit Descrition</h1>
+  </div>
+
+  <%= render "form", experience: @experience, entry_date: @entry_date, event: @event, description: @description %>
+ 
+</main>
