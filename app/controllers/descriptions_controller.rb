@@ -13,6 +13,16 @@ class DescriptionsController < ApplicationController
 
   def edit; end
 
+  def create
+    @description = @event.build_description(description_params)
+
+    if @description.save
+      redirect_to experience_entry_date_event_path(@experience, @entry_date, @event), notice: "Description was successfully created."
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
   def update
     if @description.update(description_params)
       redirect_to experience_entry_date_event_path(@experience, @entry_date, @event), notice: "Description was successfully updated."
