@@ -75,6 +75,7 @@ a {
   text-decoration: none;
   transition: color 200ms;
   font-weight: bold;
+  overflow: scroll;
 
   &:hover,
   &:focus,
