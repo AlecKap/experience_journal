@@ -1,7 +1,7 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
   event: one
+  content: Great book! I read it in 2 days!
 
 two:
   event: two
+  content: The second book in the series. I read it in 2 days as well.
