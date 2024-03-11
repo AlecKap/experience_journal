@@ -1,15 +1,17 @@
 <main class="container">
   <%= link_to sanitize("&larr; Back to #{@experience.name}"), experience_path(@experience) %>
   
-  <div class="header">
-    <h1>
-      <%= @experience.name %>
-    </h1>
-  </div>
   <div class="entry-date-date">
     <h2>
       <%= l(@entry_date.date, format: :long) %>
     </h2>
   </div>
+
+  <div class="header">
+    <h3>
+      <%= @experience.name %>
+    </h3>
+  </div>
+
   <%= render @events, entry_date: @entry_date %>
 </main>
