@@ -1,0 +1,12 @@
+.field {
+  margin: var(--space-xxxl);
+  padding: var(--space-xs);
+  background-color: var(--color-light);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-small);
+
+  &__actions {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
