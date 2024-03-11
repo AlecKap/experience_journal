@@ -8,7 +8,7 @@ class DescriptionsController < ApplicationController
   def show; end
 
   def new
-    @description = @event.descriptions.build
+    @description = @event.build_description
   end
 
   def edit; end
@@ -29,6 +29,12 @@ class DescriptionsController < ApplicationController
     else
       render :edit, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @description.destroy
+
+    redirect_to experience_entry_date_event_path(@experience, @entry_date, @event), notice: "Description was successfully destroyed."
   end
 
   private
