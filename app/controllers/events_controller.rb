@@ -11,21 +11,46 @@ class EventsController < ApplicationController
     @event = @entry_date.events.build
   end
 
+  def create
+    @event = @entry_date.events.build(event_params)
+
+    if @event.save
+      respond_to do |format|
+        format.html { redirect_to experience_entry_date_path(@experience, @entry_date), notice: "Event was successfully created." }
+        format.turbo_stream { flash.now[:notice] = "Event was successfully created." }
+      end
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
   def edit; end
 
   def update
     if @event.update(event_params)
-      redirect_to experience_entry_date_path(@experience, @entry_date), notice: "Event was successfully updated."
+      respond_to do |format|
+        format.html { redirect_to experience_entry_date_path(@experience, @entry_date), notice: "Event was successfully updated." }
+        format.turbo_stream { flash.now[:notice] = "Event was successfully updated." }
+      end
     else
       render :edit, status: :unprocessable_entity
     end
   end
+
+  def destroy
+    @event.destroy
+
+    respond_to do |format|
+      format.html { redirect_to experience_entry_date_path(@experience, @entry_date), notice: "Event was successfully destroyed." }
+      format.turbo_stream { flash.now[:notice] = "Event was successfully destroyed." }
+    end
+  end
+
   private
 
   def event_params
     params.require(:event).permit(:title)
   end
-
   
   def set_entry_date
     @entry_date = EntryDate.find(params[:entry_date_id])
