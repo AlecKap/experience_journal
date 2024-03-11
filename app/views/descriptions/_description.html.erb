@@ -1,6 +1,6 @@
 <div class="description">
     <div class="description__content">
-      <%= @description.content %>
+      <%= safe_join([@description.content.to_s.html_safe]) %>
     </div>
     <div class="description__actions">
       <%= link_to [:edit, @experience, @entry_date, @event, @description],
