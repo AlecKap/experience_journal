@@ -6,6 +6,16 @@
       <%= @event.title %>
     </h1>
   </div>
-  
-  <%= render @description, description: @description %>
+
+  <% if @event.description.nil? %>
+    <div class="empty-state">
+      <p class="empty-state__text">
+        You haven't described your experience yet. Click the button below to provide a description!
+      </p>
+
+      <%= link_to "Add a description", new_experience_entry_date_event_description_path(@experience, @entry_date, @event), class: "btn btn--primary" %>
+    </div>
+  <% else %>
+    <%= render @description, description: @description %>
+  <% end %>
 </main>
