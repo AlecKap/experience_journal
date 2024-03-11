@@ -4,6 +4,8 @@
   <div class="header">
     <h1>Edit</h1>
   </div>
-
-  <%=  render "form", experience: @experience, entry_date: @entry_date, event: @event %>
+  
+  <%= turbo_frame_tag @event do %>
+    <%=  render "form", experience: @experience, entry_date: @entry_date, event: @event %>
+  <% end %>
 </main>
