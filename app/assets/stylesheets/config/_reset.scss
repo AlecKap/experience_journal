@@ -52,6 +52,7 @@ h6 {
 h1 {
   font-size: var(--font-size-xxxxxl);
   text-shadow: var(--text-shaddow-large);
+  text-align: center;
 }
 
 h2 {
@@ -63,6 +64,7 @@ h3 {
   font-size: var(--font-size-xxl);
   text-shadow: var(--text-shaddow-small);
   align-items: center;
+  color: var(--color-text-body-dark)
 }
 
 h4 {
