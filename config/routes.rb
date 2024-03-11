@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   resources :experiences do
     resources :entry_dates, except: [:index] do
-      resources :events, except: [:index]
+      resources :events, except: [:index] do
+        resources :descriptions, except: [:index]
+      end
     end
   end
 end
