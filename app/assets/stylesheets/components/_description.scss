@@ -16,6 +16,7 @@
     justify-content: space-between;
     gap: var(--space-xs);
     margin-right: 50px;
+    overflow: scroll;
   }
 
   &__actions {
