@@ -1,14 +1,11 @@
 one:
   entry_date: today 
   title: Scythe
-  description: Great book! I read it in 2 days!
 
 two:
   entry_date: today
   title: Thunderhead
-  description: The second book in the series. I read it in 2 days as well.
 
 three:
   entry_date: today
   title: The Toll
-  description: The third book in the series. I read this one in 4 days.
