@@ -1,15 +1,15 @@
 first:
-  group: philterra_family
+  user: alec
   name: Books
 
 second:
-  group: philterra_family
+  user: alec
   name: Travel
 
 third:
-  group: philterra_family
+  user: halie
   name: Dates
 
 fourth:
-  group: philterra_family
+  user: halie
   name: Movies
