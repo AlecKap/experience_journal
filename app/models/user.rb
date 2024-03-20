@@ -1,10 +1,15 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :validatable, :rememberable
-        #  :recoverable, :registerable
+  has_many :experiences, dependent: :destroy
 
-  belongs_to :group
+  # Include default devise modules. Others available are:
+  # :lockable, :timeoutable, :trackable and :omniauthable, :recoverable
+  devise :database_authenticatable,
+         :validatable,
+         :rememberable,
+         :registerable
+        #  :confirmable
+        
+
 
   def name
     email.split('@').first.capitalize

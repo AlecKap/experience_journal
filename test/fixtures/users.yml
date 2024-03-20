@@ -1,14 +1,7 @@
 alec:
-  group: philterra_family
   email: alec@philterra.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
 
 halie:
-  group: philterra_family
   email: halie@philterra.com
-  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
-
-eavesdropper:
-  group: kapicak_family
-  email: eavesdropper@kapicak.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>

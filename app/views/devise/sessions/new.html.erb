@@ -1,9 +1,12 @@
 <main class="log_in">
+   <%= link_to sanitize("&larr; Back"), root_path %>
   <div class="header">  
     <h1>Welcome</h1>
   </div>
 
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
+
     <div class="form-inputs">
       Email:
       <%= f.input :email,
@@ -22,6 +25,4 @@
       <%= f.button :submit, "Log in", class: "btn btn--dark" %>
     </div>
   <% end %>
-
-  <%= render "devise/shared/links" %>
 </main>

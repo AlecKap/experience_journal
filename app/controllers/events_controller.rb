@@ -61,6 +61,6 @@ class EventsController < ApplicationController
   end
 
   def set_experience
-    @experience = current_group.experiences.find(params[:experience_id])
+    @experience = current_user.experiences.find(params[:experience_id])
   end
 end
