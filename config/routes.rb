@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  root to: "pages#home"
-  
   devise_for :users
+  root to: "pages#home"
 
   resources :experiences do
     resources :entry_dates, except: [:index] do
