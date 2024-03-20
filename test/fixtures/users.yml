@@ -5,8 +5,3 @@ alec:
 halie:
   email: halie@philterra.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
-
-eavesdropper:
-  group: kapicak_family
-  email: eavesdropper@kapicak.com
-  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
