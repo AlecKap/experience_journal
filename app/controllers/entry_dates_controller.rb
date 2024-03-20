@@ -52,9 +52,9 @@ class EntryDatesController < ApplicationController
   end
 
   def set_experience
-    @experience = current_group.experiences.find(params[:experience_id])
+    @experience = current_user.experiences.find(params[:experience_id])
   end
-  
+
   def set_entry_date
     @entry_date = @experience.entry_dates.find(params[:id])
   end
