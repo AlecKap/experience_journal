@@ -1,5 +1,5 @@
 class Experience < ApplicationRecord
-  belongs_to :group
+  belongs_to :user
   has_many :entry_dates, dependent: :destroy
   has_many :events, through: :entry_dates, dependent: :destroy
   
